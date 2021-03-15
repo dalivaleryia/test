@@ -1,0 +1,87 @@
+1) установить git hub с https://git-scm.com/download/win
+
+2) на git hub создать new project
+выбрать Clone or download
+clone with https
+скопировать ссылку http...
+
+3) в каталоге с файлами на своем компе в командной строке 
+git clone https://github.com/dalivaleryia/background-generator.git (проект на git hub)
+
+4) перенести нужные файлы в каталог background-generator
+
+5) перейти в background-generator
+
+6) git status
+видим, к примеру:
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        about.html
+        index.html
+
+7) git add about.html
+git add index.html
+
+git status
+видим:
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   about.html
+        new file:   index.html
+
+8) git commit
+
+9) git push
+
+10) для получения в нужной папке сделать git clone https://github.com/dalivaleryia/background-generator.git
+
+11) допустим сделали изменения
+переходим в папку background-generator
+git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   about.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+git add index.html
+Если много файлов. то add .
+
+12) проверяем были ли на master изменения:
+git pull
+
+13) создание ветвей branches
+git branch - показывает branches
+git branch littlefeature - создает branch
+
+подсвечивается та branch, где мы сейчас находимся
+
+перейти, куда мы хоти: git checkout littlefeature
+
+изменяем, отправляем в main
+
+в main пишем комментарий, жмем на Create pull request
+Видим, что есть кнопка Merge pull request
+
+кто-то смотрит изменения, вставляет комментарии, жмет Start a review, там есть разные действия
+Merge pull request
+delete branch
+
+14) конфликты
+
+после изменений, сделанным одним на другом (tmp1) сделать
+git branch conflict
+git checkout conflict
+
+merge conflict
+git checkout conflict
+git merge master
+
+
